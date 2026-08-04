@@ -95,8 +95,7 @@ jobs:
           cache: "pip"
           cache-dependency-path: |
             pyproject.toml
-            requirements.txt
-            requirements-dev.txt
+            requirements*.txt
 
       - name: Install dependencies
         shell: bash
@@ -172,8 +171,7 @@ jobs:
           cache: "pip"
           cache-dependency-path: |
             pyproject.toml
-            requirements.txt
-            requirements-dev.txt
+            requirements*.txt
 
       - name: Install dependencies
         shell: bash
