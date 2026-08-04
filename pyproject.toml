@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dataset-foundry"
+version = "0.1.0"
+description = "A governed, configuration-driven dataset engineering platform for building reproducible, versioned datasets."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+dependencies = [
+    "pydantic>=2.0",
+    "PyYAML>=6.0",
+]
+
+[project.scripts]
+foundry = "dataset_foundry.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["dataset_foundry*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

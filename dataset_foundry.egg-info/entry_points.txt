@@ -1,0 +1,2 @@
+[console_scripts]
+foundry = dataset_foundry.cli:main
