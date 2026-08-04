@@ -1,0 +1,6 @@
+interface:
+  display_name: "Dataset Foundry"
+  short_description: "Repo-specific patterns and workflows for dataset-foundry"
+  default_prompt: "Use the dataset-foundry repo skill to follow existing architecture, testing, and workflow conventions."
+policy:
+  allow_implicit_invocation: true
