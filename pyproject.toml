@@ -1,0 +1,17 @@
+- name: Lint (Ruff)
+  run: python -m ruff check .
+
+- name: Format check (Ruff format)
+  run: python -m ruff format --check .
+
+- name: Static typing (Mypy)
+  run: python -m mypy .
+
+- name: Security scan (Bandit)
+  run: python -m bandit -q -r .
+
+- name: Dependency vulnerability audit (pip-audit)
+  run: python -m pip_audit
+
+- name: Run tests with coverage
+  run: python -m pytest
