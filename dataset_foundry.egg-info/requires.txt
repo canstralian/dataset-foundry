@@ -1,0 +1,8 @@
+
+[dev]
+ruff
+mypy
+bandit
+pip-audit
+pytest
+pytest-cov
