@@ -1,17 +1,41 @@
-- name: Lint (Ruff)
-  run: python -m ruff check .
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
 
-- name: Format check (Ruff format)
-  run: python -m ruff format --check .
+[project]
+name = "dataset-foundry"
+version = "0.1.0"
+description = "A governed, configuration-driven Dataset Foundry that transforms raw datasets into reproducible, versioned artifacts."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+dependencies = []
 
-- name: Static typing (Mypy)
-  run: python -m mypy .
+[project.optional-dependencies]
+dev = [
+    "ruff",
+    "mypy",
+    "bandit",
+    "pip-audit",
+    "pytest",
+    "pytest-cov",
+]
 
-- name: Security scan (Bandit)
-  run: python -m bandit -q -r .
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["dataset_foundry*"]
 
-- name: Dependency vulnerability audit (pip-audit)
-  run: python -m pip_audit
+[tool.ruff]
+line-length = 88
+target-version = "py311"
 
-- name: Run tests with coverage
-  run: python -m pytest
+[tool.ruff.lint]
+select = ["E", "F", "I", "W"]
+
+[tool.mypy]
+python_version = "3.11"
+ignore_missing_imports = true
+strict = false
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

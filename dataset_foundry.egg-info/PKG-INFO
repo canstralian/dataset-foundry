@@ -1,0 +1,26 @@
+Metadata-Version: 2.4
+Name: dataset-foundry
+Version: 0.1.0
+Summary: A governed, configuration-driven Dataset Foundry that transforms raw datasets into reproducible, versioned artifacts.
+License: MIT
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Provides-Extra: dev
+Requires-Dist: ruff; extra == "dev"
+Requires-Dist: mypy; extra == "dev"
+Requires-Dist: bandit; extra == "dev"
+Requires-Dist: pip-audit; extra == "dev"
+Requires-Dist: pytest; extra == "dev"
+Requires-Dist: pytest-cov; extra == "dev"
+Dynamic: license-file
+
+# RIF Dataset Foundry
+
+A governed, configuration-driven dataset engineering platform for building reproducible, versioned datasets from heterogeneous sources.
+
+## Vision
+
+Transform raw datasets into evidence-backed, license-aware, semantically chunked datasets for SFT, DPO, RAG, evaluation, and future AI workflows.
+
+See `CLAUDE.md` for repository engineering guidance.
