@@ -1,17 +1,30 @@
-- name: Lint (Ruff)
-  run: python -m ruff check .
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
 
-- name: Format check (Ruff format)
-  run: python -m ruff format --check .
+[project]
+name = "dataset-foundry"
+version = "0.0.0"
+description = "Governed, configuration-driven dataset engineering platform."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = []
 
-- name: Static typing (Mypy)
-  run: python -m mypy .
+[project.optional-dependencies]
+dev = [
+  "bandit",
+  "mypy",
+  "pip-audit",
+  "pytest",
+  "pytest-cov",
+  "ruff",
+]
 
-- name: Security scan (Bandit)
-  run: python -m bandit -q -r .
+[tool.setuptools.packages.find]
+include = ["dataset_foundry*"]
 
-- name: Dependency vulnerability audit (pip-audit)
-  run: python -m pip_audit
+[tool.ruff]
+target-version = "py311"
 
-- name: Run tests with coverage
-  run: python -m pytest
+[tool.mypy]
+python_version = "3.11"
