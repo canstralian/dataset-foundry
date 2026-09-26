@@ -1,0 +1,22 @@
+# Python bytecode and caches
+__pycache__/
+*.pyc
+*.pyo
+
+# Build and packaging artifacts
+*.egg-info/
+build/
+dist/
+
+# Local environments
+.venv/
+venv/
+
+# Local QA and coverage artifacts
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+coverage.xml
+htmlcov/
