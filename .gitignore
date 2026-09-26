@@ -12,6 +12,11 @@ dist/
 .venv/
 venv/
 
+# Local secrets; keep a redacted example template
+.env
+.env.*
+!.env.example
+
 # Local QA and coverage artifacts
 .pytest_cache/
 .mypy_cache/
