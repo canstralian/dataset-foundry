@@ -6,8 +6,8 @@ import dataset_foundry
 
 
 def test_package_is_importable_with_distribution_metadata() -> None:
-    """The editable install must expose both the package and distribution metadata."""
+    """Editable install must expose package and distribution metadata."""
     if dataset_foundry.__package__ != "dataset_foundry":
-        raise AssertionError("dataset_foundry package identity is not importable as expected")
+        raise AssertionError("unexpected package identity")
     if not version("dataset-foundry"):
-        raise AssertionError("dataset-foundry distribution metadata is missing a version")
+        raise AssertionError("missing distribution version")
